@@ -93,10 +93,12 @@ $(endif)
 
                             <form action="$(link-logout)" name="logout" onSubmit="return openLogout()">
                                 <table>
+                                    <tr><td class="text-dark">Voucher Code</td><td class="text-muted">$(username)</td></tr>
                                     <tr><td class="text-dark">IP address</td><td class="text-muted">$(ip)</td></tr>
-                                    <tr><td class="text-dark">Bytes up / down</td><td class="text-muted">$(bytes-in-nice) / $(bytes-out-nice)</td></tr>
+                                    <tr><td class="text-dark">MAC address</td><td class="text-muted">$(mac)</td></tr>                                    
+                                    <tr><td class="text-dark">Bytes up | down</td><td class="text-muted">$(bytes-in-nice) | $(bytes-out-nice)</td></tr>
                                 $(if session-time-left)
-                                    <tr><td class="text-dark">Connected / left</td><td class="text-muted">$(uptime) / $(session-time-left)</td></tr>
+                                    <tr><td class="text-dark">Connected | left</td><td class="text-muted">$(uptime) | $(session-time-left)</td></tr>
                                 $(else)
                                     <tr><td class="text-dark">Connected</td><td class="text-muted">$(uptime)</td></tr>
                                 $(endif)
