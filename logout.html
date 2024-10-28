@@ -102,10 +102,8 @@
                         </ul>
                   </div>
         
-                  <div class="card-body">
-    
-                    <div class="tab-content" id="klcis-tabContent">
-    
+                  <div class="card-body">    
+                    <div class="tab-content" id="klcis-tabContent">    
                       <!-- Status Panel -->
                       <div class="tab-pane fade" id="hotspot_logout" role="tabpanel" aria-labelledby="logout-tab">
                         <!-- <h1 class="text-center text-gray mb-2 mt-2">KEITH PISOWIFI</h1> -->
@@ -165,11 +163,7 @@
                           <div class="text-center">                  
                             <button class="btn btn-md btn-primary rounded-pill mt-2" id="generate_qr"><i class="fas fa-qrcode"></i> Generate QR</button>                
                           </div>
-                          <div id="qrcode" style="display: none;"></div>
-                          <hr>
-                          <p class="text-muted text-sm mb-0 mt-0 text-center">No KLCIS client account? <br>
-                            <a class="text-muted text-sm" href="https://s2.klinternetservices.com/client"><strong>CLICK HERE TO SIGN-UP!</strong></a>
-                          </p>     
+                          <div id="qrcode" style="display: none;"></div>   
                         </div>
                      
         
@@ -186,8 +180,9 @@
                             <label class="text-muted text-sm mt-1" for="key">KLCiS Client API Secret:</label>
                             <input type="password" name="key" id="key" class="form-control text-center text-lg" placeholder="KLCIS Client API Secret" required>
                           </div>
-                              <button type="submit" id="checkVouchers" class="btn btn-md btn-success btn-block rounded-pill mb-2">Check Vouchers</button>
-                              <button type="submit" id="checkTransactions" class="btn btn-md btn-primary btn-block rounded-pill mb-2">Check Transactions</button>
+                            <button type="submit" class="btn btn-md btn-primary btn-block rounded-pill" id="gcash"><img src="klcis/gcash_logo.png" style="height: 28px; width: 120px;"></button>
+                            <button type="submit" class="btn btn-md btn-success btn-block rounded-pill" id="maya"><img src="klcis/maya_logo.png" style="height: 25px; width: 80px;"></button>
+                            <button type="submit" class="btn btn-md btn-warning btn-block rounded-pill" id="spay"><img src="klcis/spay_logo.svg" style="height: 28px; width: 80px;"></button>
                           </form>
               
                           <div id="vouchersTable" style="display: none;">
@@ -222,7 +217,13 @@
               
                       <div class="text-center text-xs text-muted" id="result"></div>
                       </div>    
-                    </div>     
+                    </div>
+                    
+                    <hr>
+                    <p class="text-muted text-sm mb-0 mt-0 text-center">No KLCIS client account? <br>
+                      <a class="text-muted text-sm" href="https://s2.klinternetservices.com/client"><strong>CLICK HERE TO SIGN-UP!</strong></a>
+                    </p> 
+
                   </div>
                 </div>      
               </div>

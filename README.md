@@ -38,7 +38,7 @@ This is a minimalist Mikrotik hotspot template that features KLCiS e-wallet paym
      ```
    - Replace `PUT_YOUR_KLCIS_API_KEY_HERE` with your actual KLCiS API key.
 
-5. **Repeat Steps 2–4 for `status.html`**
+5. **Repeat Steps 3–4 for `status.html and logout.html`**
 
 6. **Customize the Banner Carousel**
    - To replace the banner images, replace `banner1.jpg` and `banner2.jpg` in the `img` folder. 

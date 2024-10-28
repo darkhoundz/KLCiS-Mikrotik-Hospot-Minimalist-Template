@@ -21,8 +21,6 @@
   }
 </style>
 
-
-</head>
 <script>
   document.addEventListener("DOMContentLoaded", function() {
     loadVoucherStoreContent();
@@ -33,6 +31,7 @@
     document.getElementById("hotspot_login").classList.add("active");
   }
 </script>
+</head>
 
 <body>
 <!-- two other colors
@@ -195,10 +194,6 @@ $(endif)
                     <button class="btn btn-md btn-primary rounded-pill mt-2" id="generate_qr"><i class="fas fa-qrcode"></i> Generate QR</button>                
                   </div>
                   <div id="qrcode" style="display: none;"></div>
-                  <hr>
-                  <p class="text-muted text-sm mb-0 mt-0 text-center">No KLCIS client account? <br>
-                    <a class="text-muted text-sm" href="https://s2.klinternetservices.com/client"><strong>CLICK HERE TO SIGN-UP!</strong></a>
-                  </p>     
                 </div>
              
 
@@ -251,7 +246,13 @@ $(endif)
       
               <div class="text-center text-xs text-muted" id="result"></div>
               </div>    
-            </div>     
+            </div>
+            
+            <hr>
+            <p class="text-muted text-sm mb-0 mt-0 text-center">No KLCIS client account? <br>
+              <a class="text-muted text-sm" href="https://s2.klinternetservices.com/client"><strong>CLICK HERE TO SIGN-UP!</strong></a>
+            </p>  
+
           </div>
         </div>      
       </div>
@@ -264,6 +265,14 @@ $(endif)
 <script src="klcis/alert.js"></script>
 <script src="klcis/bootstrap.bundle.min.js"></script>
 <!-- <script src="klcis/adminlte.min.js"></script> -->
+
+<script>
+  $(document).ready(function() {
+   $('#gcash').on('click', function() { $('#method').val('gcash'); });
+    $('#maya').on('click', function() { $('#method').val('maya'); });
+    $('#spay').on('click', function() { $('#method').val('spay'); });
+  });
+</script>
 
 <!-- END OF KLCIS VOUCHER SYSTEM CODE -->
 </body>
