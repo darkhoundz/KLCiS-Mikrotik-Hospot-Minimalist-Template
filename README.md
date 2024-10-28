@@ -56,3 +56,40 @@ This is a minimalist Mikrotik hotspot template that features KLCiS e-wallet paym
    - Upload the template to your Mikrotik device:
      - For **Haplite** devices, place it in the hotspot folder.
      - For **Hex** devices, place it inside the flash folder.
+
+8. **Run the Following Commands in the Terminal**
+   
+   Add these entries to the Mikrotik Hotspot Walled Garden IP list to allow access to required domains:
+
+   ```bash
+   /ip hotspot walled-garden ip
+   add action=accept dst-host=s2.klinternetservices.com comment="s2.klinternetservices.com"
+   add action=accept dst-host=s2.klinternetservices.com comment="klinternetservices.com"
+   add action=accept dst-host=payments.gcash.com comment="payments.gcash.com"
+   add action=accept dst-host=gcash-api.pulseid.com comment="gcash-api.pulseid.com"
+   add action=accept dst-host=beacons.gcp.gvt2.com comment="beacons.gcp.gvt2.com"
+   add action=accept dst-host=irisk-sea.alipay.com comment="irisk-sea.alipay.com"
+   add action=accept dst-host=mss.paas.mynt.xyz comment="mss.paas.mynt.xyz"
+   add action=accept dst-host=api.mynt.xyz comment="api.mynt.xyz"
+   add action=accept dst-host=login.mynt.xyz comment="login.mynt.xyz"
+   add action=accept dst-host=customer-segment-api.mynt.xyz comment="customer-segment-api.mynt.xyz"
+   add action=accept dst-host=gw.alipayobjects.com comment="gw.alipayobjects.com"
+   add action=accept dst-host=mdap.paas.mynt.xyz comment="mdap.paas.mynt.xyz"
+   add action=accept dst-host=mgs-gw.paas.mynt.xyz comment="mgs-gw.paas.mynt.xyz"
+   add action=accept dst-host=ewallet-service-live.xendit.co comment="ewallet-service-live.xendit.co"
+   add action=accept dst-host=checkout-ui-gateway.xendit.co comment="checkout-ui-gateway.xendit.co"
+   add action=accept dst-host=checkout.xendit.co comment="checkout.xendit.co"
+   add action=accept dst-host=payments.maya.ph comment="payments.maya.ph"
+   add action=accept dst-host=assets.maya.ph comment="assets.maya.ph"
+   add action=accept dst-host=assets.paymaya.com comment="assets.paymaya.com"
+   add action=accept dst-host=api.mayabank.ph comment="api.mayabank.ph"
+   add action=accept dst-host=api.paymaya.com comment="api.paymaya.com"
+   add action=accept dst-host=api-bnpl.mayabank.ph comment="api-bnpl.mayabank.ph"
+   add action=accept dst-host=api.xendit.co comment="api.xendit.co"
+   add action=accept dst-host=connect.paymaya.com comment="connect.paymaya.com"
+   add action=accept dst-host=payments.paymaya.com comment="payments.paymaya.com"
+   add action=accept dst-host=cdn.growthbook.io comment="cdn.growthbook.io"
+   add action=accept dst-host=d39ewjhej4wmka.cloudfront.net comment="d39ewjhej4wmka.cloudfront.net"
+   add action=accept dst-host=snowplow-collector.iluma.ai comment="snowplow-collector.iluma.ai"
+   add action=accept dst-host=xnd-merchant-logos.s3.amazonaws.com comment="xnd-merchant-logos.s3.amazonaws.com"
+   add action=accept dst-host=snake.xendit.co.cdn.cloudflare.net comment="snake.xendit.co.cdn.cloudflare.net"
