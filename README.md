@@ -1,4 +1,4 @@
-![logout](https://github.com/user-attachments/assets/e1c3c305-2d5c-4131-8db7-14310746bf55)# KLCiS Mikrotik Hotspot Minimalist Template OFFLINE STORE.
+# KLCiS Mikrotik Hotspot Minimalist Template OFFLINE STORE.
 
 This is a minimalist Mikrotik hotspot template that features KLCiS e-wallet payment options for purchasing voucher codes or tickets. It supports GCash, Maya (PayMaya), and ShopeePay payment methods. Note: This payment integration is currently only available in the Philippines.
 
