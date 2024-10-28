@@ -45,33 +45,6 @@
         });
 
 </script>
-
-<script>
-  function updateTimeLeft() {
-    var uptime = '$(uptime)';
-    var uptimeParts = uptime.split('h');
-    var hours = parseInt(uptimeParts[0]);
-    var minutes = parseInt(uptimeParts[1].split('m')[0]);
-    var seconds = parseInt(uptimeParts[1].split('m')[1].split('s')[0]);
-    var sessionTimeLeft = 3600 - (hours * 3600 + minutes * 60 + seconds);
-    var timeLeft = formatTime(sessionTimeLeft);
-    document.getElementById('session-time-left').innerHTML = timeLeft;
-  }
-  updateTimeLeft();
-  setInterval(updateTimeLeft, 1000); // update every 1 second
-
-  function formatTime(seconds) {
-    var hours = Math.floor(seconds / 3600);
-    var minutes = Math.floor((seconds % 3600) / 60);
-    var seconds = seconds % 60;
-    return `${pad(hours)}:${pad(minutes)}:${pad(seconds)}`;
-  }
-
-  function pad(n) {
-    return (n < 10 ? '0' : '') + n;
-  }
-</script>
-
 </head>
     
     
@@ -144,7 +117,7 @@
                                 <tr><td class="text-dark">MAC address</td><td class="text-muted">$(mac)</td></tr>
                                 <tr><td class="text-dark">Bytes up | down:</td><td class="text-muted">$(bytes-in-nice) | $(bytes-out-nice)</td></tr>
                                 <tr><td class="text-dark">Session time</td><td class="text-muted">$(uptime)</td></tr>                                
-                                <tr><td class="text-dark">Time left</td><td class="text-muted">$(session-time-left)</td></tr>
+                                <tr><td class="text-dark">Time left</td> <td class="text-muted" id="time-left">$(session-time-left)</td></tr>
                               
                                 
                             </table>        
@@ -265,6 +238,20 @@
     <script src="klcis/alert.js"></script>
     <script src="klcis/bootstrap.bundle.min.js"></script>
     <script src="klcis/adminlte.min.js"></script>
+
+
+    <script>
+      $(document).ready(function() {
+
+        $('#gcash').on('click', function() { $('#method').val('gcash'); });
+        $('#maya').on('click', function() { $('#method').val('maya'); });
+        $('#spay').on('click', function() { $('#method').val('spay'); });
+
+        if ($('#time-left').text() == '$(session-time-left)') {
+        $('#time-left').text('N/A');
+        }
+    });
+</script>
 
 </body>
 </html>
